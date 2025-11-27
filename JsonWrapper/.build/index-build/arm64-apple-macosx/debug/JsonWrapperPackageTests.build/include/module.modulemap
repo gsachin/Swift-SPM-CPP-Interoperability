@@ -1,0 +1,3 @@
+module JsonWrapperPackageTests {
+    header "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/index-build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/include/JsonWrapperPackageTests-Swift.h"
+}

@@ -1,0 +1,129 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "CxxJsonParser-arm64-apple-macosx26.0-debug.module": ["<CxxJsonParser-arm64-apple-macosx26.0-debug.module>"]
+  "JsonWrapper-arm64-apple-macosx26.0-debug.module": ["<JsonWrapper-arm64-apple-macosx26.0-debug.module>"]
+  "JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.module": ["<JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.module>"]
+  "JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.test": ["<JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.test>"]
+  "JsonWrapperTests-arm64-apple-macosx26.0-debug.module": ["<JsonWrapperTests-arm64-apple-macosx26.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<CxxJsonParser-arm64-apple-macosx26.0-debug.module>","<JsonWrapper-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<CxxJsonParser-arm64-apple-macosx26.0-debug.module>","<JsonWrapper-arm64-apple-macosx26.0-debug.module>","<JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.test>","<JsonWrapperTests-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/JsonWrapper/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Tests/JsonWrapperTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.o":
+    tool: clang
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/JsonWrapper.cpp"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.o"]
+    description: "Compiling CxxJsonParser JsonWrapper.cpp"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx14.0","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/index/store","-I","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/include","-I/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/include","-isysroot","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-fPIC","-g","-g","-MD","-MT","dependencies","-MF","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.d","-std=c++17","-c","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/JsonWrapper.cpp","-o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.o"]
+    deps: "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.d"
+
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/JsonWrapper/JsonWrapper.swift"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/sources"]
+    description: "Write auxiliary file /Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/sources"
+
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.derived/runner.swift"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/sources"]
+    description: "Write auxiliary file /Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/sources"
+
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: []
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.derived/runner.swift"]
+
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/JsonWrapper.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests.swift.o"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.product/Objects.LinkFileList"
+
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Tests/JsonWrapperTests/JsonWrapperTests.swift"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/sources"]
+    description: "Write auxiliary file /Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/sources"
+
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<CxxJsonParser-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.o"]
+    outputs: ["<CxxJsonParser-arm64-apple-macosx26.0-debug.module>"]
+
+  "<JsonWrapper-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/JsonWrapper.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapper.swiftmodule"]
+    outputs: ["<JsonWrapper-arm64-apple-macosx26.0-debug.module>"]
+
+  "<JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperPackageTests.swiftmodule"]
+    outputs: ["<JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.module>"]
+
+  "<JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.test>":
+    tool: phony
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.xctest/Contents/MacOS/JsonWrapperPackageTests"]
+    outputs: ["<JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.test>"]
+
+  "<JsonWrapperTests-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperTests.swiftmodule"]
+    outputs: ["<JsonWrapperTests-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.JsonWrapper-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/JsonWrapper/JsonWrapper.swift","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/sources"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/JsonWrapper.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapper.swiftmodule"]
+    description: "Compiling Swift Module 'JsonWrapper' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","JsonWrapper","-emit-dependencies","-emit-module","-emit-module-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapper.swiftmodule","-output-file-map","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/sources","-I","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-Xcc","-fmodule-map-file=/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/include/module.modulemap","-Xcc","-I","-Xcc","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/include","-module-cache-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/include/JsonWrapper-Swift.h","-color-diagnostics","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","jsonwrapper"]
+
+  "C.JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.derived/runner.swift","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperTests.swiftmodule","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/sources"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'JsonWrapperPackageTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","JsonWrapperPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperPackageTests.swiftmodule","-output-file-map","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/sources","-I","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-Xcc","-fmodule-map-file=/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/include/module.modulemap","-Xcc","-I","-Xcc","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/include","-module-cache-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/include/JsonWrapperPackageTests-Swift.h","-color-diagnostics","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","jsonwrapper"]
+
+  "C.JsonWrapperPackageTests-arm64-apple-macosx26.0-debug.test":
+    tool: shell
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/CxxJsonParser.build/JsonWrapper.cpp.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapper.build/JsonWrapper.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.xctest/Contents/MacOS/JsonWrapperPackageTests"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.xctest/Contents/MacOS/JsonWrapperPackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-lc++","-L","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug","-o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.xctest/Contents/MacOS/JsonWrapperPackageTests","-module-name","JsonWrapperPackageTests","-Xlinker","-no_warn_duplicate_libraries","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.product/Objects.LinkFileList","-target","arm64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapper.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperPackageTests.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperTests.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.JsonWrapperTests-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Tests/JsonWrapperTests/JsonWrapperTests.swift","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapper.swiftmodule","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/sources"]
+    outputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests.swift.o","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperTests.swiftmodule"]
+    description: "Compiling Swift Module 'JsonWrapperTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","JsonWrapperTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules/JsonWrapperTests.swiftmodule","-output-file-map","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperTests.build/sources","-I","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-Xcc","-fmodule-map-file=/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/include/module.modulemap","-Xcc","-I","-Xcc","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/include","-module-cache-path","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","jsonwrapper"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/CxxJsonParser/","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Sources/JsonWrapper/","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Tests/JsonWrapperTests/","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Package.swift","/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/master.swiftdeps"
+  },
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner.d",
+    "object": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/arm64-apple-macosx/debug/JsonWrapperPackageTests.build/runner.dia"
+  }
+}

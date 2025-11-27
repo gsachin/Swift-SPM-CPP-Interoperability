@@ -1,0 +1,4 @@
+module CxxJsonParser {
+    header "JsonWrapper.h"
+    export *
+}

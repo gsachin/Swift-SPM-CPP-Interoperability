@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/index-build/arm64-apple-macosx/debug/JsonWrapperTests.build/master.swiftdeps"
+  },
+  "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/Tests/JsonWrapperTests/JsonWrapperTests.swift": {
+    "dependencies": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/index-build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests.d",
+    "object": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/index-build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests.swift.o",
+    "swiftmodule": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/index-build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/index-build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests.swiftdeps",
+    "diagnostics": "/Users/aiwork/iOSStudy/Swift-SPM-CPP-Interoperability/JsonWrapper/.build/index-build/arm64-apple-macosx/debug/JsonWrapperTests.build/JsonWrapperTests.dia"
+  }
+}
